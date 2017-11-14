@@ -1,0 +1,7 @@
+# Domination_Core
+
+This is the underlying frame work for our Domination Missions. All files contain herein are non-map specific, and establish the unifying, consistent mission, that should be easily applicable to any map, given some minor configuration.
+
+Mission.SQM Requirments:
+1. Base marker named "base"
+2. TWC Cache Module with Vehicle cache above 0

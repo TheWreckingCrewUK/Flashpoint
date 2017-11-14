@@ -1,0 +1,1 @@
+#include "sys_player\init.sqf";
