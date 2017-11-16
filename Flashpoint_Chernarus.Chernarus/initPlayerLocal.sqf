@@ -51,6 +51,8 @@ twc_restrictedVehicleSlots = [
 		]
 	]
 ];
+twc_supplyBoxBuildables = [["ACE_ConcertinaWireCoil",200],["twc_Land_BagFence_Corner_F",100],["twc_Land_BagFence_Long_F",100],["twc_Land_BagFence_Short_F",100],["twc_Land_BagFence_End_F",100],["twc_Land_BagFence_Round_F",100],["twc_Land_BagBunker_Small_F",500],["Land_PortableLight_double_F",100]];
+
 //Slot Restrictions. TBA when we are doing more then just testing
 _justPlayers = count(allPlayers - entities "HeadlessClient_F");
 if(false)then{

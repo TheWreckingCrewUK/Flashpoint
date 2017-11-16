@@ -62,23 +62,23 @@
       pos = [parameters] call SHK_pos;
 */
 // Functions
-SHK_pos_getPos = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_getpos.sqf";
+SHK_pos_getPos = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_getpos.sqf";
 
 // Sub functions
-SHK_pos_fnc_findClosestPosition = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_findclosestposition.sqf";
-SHK_pos_fnc_getMarkerCorners = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getmarkercorners.sqf";
-SHK_pos_fnc_getMarkerShape = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getmarkershape.sqf";
-SHK_pos_fnc_getPos = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getpos.sqf";
-SHK_pos_fnc_getPosFromCircle = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getposfromcircle.sqf";
-SHK_pos_fnc_getPosFromEllipse = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getposfromellipse.sqf";
-SHK_pos_fnc_getPosFromRectangle = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getposfromrectangle.sqf";
-SHK_pos_fnc_getPosFromSquare = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_getposfromsquare.sqf";
-SHK_pos_fnc_isBlacklisted = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_isblacklisted.sqf";
-SHK_pos_fnc_isInCircle = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_isincircle.sqf";
-SHK_pos_fnc_isInEllipse = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_isinellipse.sqf";
-SHK_pos_fnc_isInRectangle = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_isinrectangle.sqf";
-SHK_pos_fnc_isSamePosition = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_issameposition.sqf";
-SHK_pos_fnc_rotatePosition = compile preprocessfilelinenumbers "Domination_Core\shk_pos\shk_pos_fnc_rotateposition.sqf";
+SHK_pos_fnc_findClosestPosition = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_findclosestposition.sqf";
+SHK_pos_fnc_getMarkerCorners = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getmarkercorners.sqf";
+SHK_pos_fnc_getMarkerShape = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getmarkershape.sqf";
+SHK_pos_fnc_getPos = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getpos.sqf";
+SHK_pos_fnc_getPosFromCircle = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getposfromcircle.sqf";
+SHK_pos_fnc_getPosFromEllipse = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getposfromellipse.sqf";
+SHK_pos_fnc_getPosFromRectangle = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getposfromrectangle.sqf";
+SHK_pos_fnc_getPosFromSquare = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_getposfromsquare.sqf";
+SHK_pos_fnc_isBlacklisted = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_isblacklisted.sqf";
+SHK_pos_fnc_isInCircle = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_isincircle.sqf";
+SHK_pos_fnc_isInEllipse = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_isinellipse.sqf";
+SHK_pos_fnc_isInRectangle = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_isinrectangle.sqf";
+SHK_pos_fnc_isSamePosition = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_issameposition.sqf";
+SHK_pos_fnc_rotatePosition = compile preprocessfilelinenumbers "Flashpoint_Core\shk_pos\shk_pos_fnc_rotateposition.sqf";
 
 // Wrapper function
 // Decide which function to call based on parameters.

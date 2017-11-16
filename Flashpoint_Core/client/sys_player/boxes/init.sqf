@@ -12,10 +12,10 @@ crateBox = _boxType createVehicleLocal (getMarkerPos _marker);
 crateBox setPosATL (getMarkerPos _marker);
 crateBox allowDamage false;
 
-[crateBox] execVM "Domination_Core\client\sys_player\boxes\main_ammo.sqf";
+[crateBox] execVM "Flashpoint_Core\client\sys_player\boxes\main_ammo.sqf";
 
 player addEventHandler ["InventoryClosed", {
 	if((_this select 1) == crateBox)then{
-		[_this select 1]execVM "Domination_Core\client\sys_player\boxes\main_ammo.sqf";
+		[_this select 1]execVM "Flashpoint_Core\client\sys_player\boxes\main_ammo.sqf";
 	};
 }];

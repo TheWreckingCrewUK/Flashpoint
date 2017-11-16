@@ -25,6 +25,28 @@ TWC_Building_Style = "Med";
 _script = execVM "Flashpoint_Core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
+twc_flashpointDifficulty = "easy";
+publicVariable "twc_flashpointDifficulty";
+
+//Sets up the Extra Sites:
+twc_capitalFlag = "Faction_CUP_CDF";
+twc_cityFlag = "mil_circle";
+twc_villageFlag = "c_unknown";
+twc_airportFlag = "o_plane";
+twc_localFlag = "o_installation";
+twc_radioFlag = "loc_Transmitter";
+twc_powerFlag = "loc_Power";
+
+twc_radioTowers = ["Land_Telek1","Land_A_TVTower_Base","Land_Vysilac_FM"];
+twc_powerPlants = ["Land_Trafostanica_velka"];
+
+twc_outpostNames = ["outpost_1"];
+twc_radioNames = ["radio_1"];
+twc_installationNames = ["factory_1"];
+
+twc_dumbLocations = ["Cap Golova","Drakon","Otmel","Krutoy Cap"];
+
+twc_bluforControlledLocations = ["base_1","base_2","base_3","base_4","base_5","base_6","base_7","base_8","base_9","base_10"];
 
 //Sets up the unit Caching. I have no idea why i have to sleep and wait.
 []spawn{sleep 120;
@@ -39,4 +61,8 @@ waitUntil{scriptDone _script};
 }, true, ["Man","Static"], true] call CBA_fnc_addClassEventHandler;
 };
 // event handlers run in the non-scheduled environment (can't be execVM)
+
+twc_baseDone = false;
+publicVariable "twc_baseDone";
+
 [] call compile preprocessFile "Flashpoint_Core\server\init.sqf";
