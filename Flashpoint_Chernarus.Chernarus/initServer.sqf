@@ -46,6 +46,9 @@ twc_installationNames = ["factory_1"];
 
 twc_dumbLocations = ["Cap Golova","Drakon","Otmel","Krutoy Cap"];
 
+twc_townTransportDistance = 8000;
+twc_flags = [];
+
 twc_bluforControlledLocations = ["base_1","base_2","base_3","base_4","base_5","base_6","base_7","base_8","base_9","base_10"];
 
 //Sets up the unit Caching. I have no idea why i have to sleep and wait.

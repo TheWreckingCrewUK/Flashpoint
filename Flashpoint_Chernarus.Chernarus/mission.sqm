@@ -8,7 +8,7 @@ class EditorData
 	toggles=1033;
 	class ItemIDProvider
 	{
-		nextID=65;
+		nextID=67;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13770.698,158.69363,2788.7451};
-		dir[]={-0.46731737,-0.51006871,0.72217071};
-		up[]={-0.27711338,0.86012417,0.42823514};
-		aside[]={0.83959359,6.7750807e-007,0.54330111};
+		pos[]={12846.708,25.265574,8013.0557};
+		dir[]={0.91804123,-0.36660069,0.15105149};
+		up[]={0.3617492,0.93037385,0.059519943};
+		aside[]={0.16235441,-6.3807238e-007,-0.98673838};
 	};
 };
 binarizationWanted=0;
@@ -123,7 +123,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=22;
 		class Item0
 		{
 			dataType="Group";
@@ -1839,11 +1839,11 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={13687.841,0.42578125,2912.0735};
+			position[]={16114.985,81.345093,21692.684};
 			name="respawn_west";
 			type="b_hq";
 			id=24;
-			atlOffset=-46.008667;
+			atlOffset=-45.730835;
 		};
 		class Item4
 		{
@@ -2358,7 +2358,7 @@ class Mission
 		class Item17
 		{
 			dataType="Marker";
-			position[]={7678.1992,0,14232.515};
+			position[]={7227.2896,98.58252,21665.244};
 			name="hostileterritoryMarker";
 			markerType="RECTANGLE";
 			type="rectangle";
@@ -2368,133 +2368,48 @@ class Mission
 			b=7679.9692;
 			angle=89.813004;
 			id=44;
-			atlOffset=-354.87421;
+			atlOffset=-263.57742;
 		};
 		class Item18
 		{
 			dataType="Marker";
-			position[]={11996.315,61.212402,12820.349};
+			position[]={11545.406,202.07803,20253.078};
 			name="marker_4";
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			angle=179.15108;
 			id=45;
-			atlOffset=-97.73671;
 		};
 		class Item19
 		{
 			dataType="Marker";
-			position[]={8013.3838,151.30078,12988.817};
+			position[]={7562.4741,401.68295,20421.547};
 			name="marker_5";
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			angle=179.15108;
 			id=46;
-			atlOffset=-42.19249;
+			atlOffset=49.10434;
 		};
 		class Item20
 		{
 			dataType="Marker";
-			position[]={3990.3982,185.32867,12866.666};
+			position[]={3539.4885,412.1619,20299.395};
 			name="marker_6";
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			angle=179.15108;
 			id=47;
-			atlOffset=-3.0517578e-005;
+			atlOffset=91.296753;
 		};
 		class Item21
 		{
 			dataType="Marker";
-			position[]={9602.6162,307.03339,8915.9365};
+			position[]={5334.4746,340.54321,8150.2744};
 			name="base";
 			type="Empty";
 			id=54;
-		};
-		class Item22
-		{
-			dataType="Marker";
-			position[]={6165.4956,301.30051,7793.4976};
-			name="base_1";
-			type="Empty";
-			id=55;
-		};
-		class Item23
-		{
-			dataType="Marker";
-			position[]={6830.3774,385.80518,11560.682};
-			name="base_2";
-			type="Empty";
-			id=56;
-			atlOffset=-1.6317444;
-		};
-		class Item24
-		{
-			dataType="Marker";
-			position[]={3064.9482,299.61621,7942.6206};
-			name="base_3";
-			type="Empty";
-			id=57;
-		};
-		class Item25
-		{
-			dataType="Marker";
-			position[]={7118.8452,294.14359,7774.8979};
-			name="base_4";
-			type="Empty";
-			id=58;
-		};
-		class Item26
-		{
-			dataType="Marker";
-			position[]={4770.2271,271.01141,6831.7778};
-			name="base_5";
-			type="Empty";
-			id=59;
-			atlOffset=-3.0517578e-005;
-		};
-		class Item27
-		{
-			dataType="Marker";
-			position[]={3821.605,310.98999,8902.4551};
-			name="base_6";
-			type="Empty";
-			id=60;
-		};
-		class Item28
-		{
-			dataType="Marker";
-			position[]={6028.8589,-132.05081,9012.8848};
-			name="base_7";
-			type="Empty";
-			id=61;
-			atlOffset=-472.50684;
-		};
-		class Item29
-		{
-			dataType="Marker";
-			position[]={5941.8174,-133.66864,10337.984};
-			name="base_8";
-			type="Empty";
-			id=62;
-			atlOffset=-401.85773;
-		};
-		class Item30
-		{
-			dataType="Marker";
-			position[]={4628.0195,339,10190.062};
-			name="base_9";
-			type="Empty";
-			id=63;
-		};
-		class Item31
-		{
-			dataType="Marker";
-			position[]={5307.0146,334.15082,8635.6553};
-			name="base_10";
-			type="Empty";
-			id=64;
-			atlOffset=3.0517578e-005;
+			atlOffset=-14.135345;
 		};
 	};
 };

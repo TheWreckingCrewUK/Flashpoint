@@ -16,11 +16,14 @@ nameCityLocationArray = nearestLocations [[worldSize / 2, worldSize / 2], ["Name
 */
 }forEach nameCityLocationArray;
 
+_transportArray = nameCityLocationArray + [twc_capitalLocation];
+
+
 nameVillageLocationArray = nearestLocations [[worldSize / 2, worldSize / 2], ["NameVillage"], (sqrt 2 *(worldSize / 2))];
 {
 	[_x,twc_villageFlag,"placeHolder",1] call twc_fnc_createSite;
 }forEach nameVillageLocationArray;
-
+/*
 nameLocalLocationArray = nearestLocations [[worldSize / 2, worldSize / 2], ["nameLocal"], (sqrt 2 *(worldSize / 2))];
 {
 	if(count (nearestObjects [getPos _x,twc_radioTowers,200]) > 0)then{
