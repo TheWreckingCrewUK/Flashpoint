@@ -10,12 +10,11 @@ onMapSingleClick {
 };
 waitUntil {!visibleMap};
 if((getMarkerPos "respawn_west") distance2D (getPos player) < 1000)exitWith{onMapSingleClick{}; hint "You did not set the base far enough away. Please try again"};
-if(isnil "twc_baseDone")then{
-	[player] spawn twc_fnc_addBaseCreationActions;
-};
+[player] spawn twc_fnc_addBaseCreationActions;
 hint "Open up your briefing to see a list of things to do in order to call this a real base";
 {
-	_x setPos (getMarkerPos "respawn_West")
+	_x setPos (getMarkerPos "respawn_West");
+	twc_bluforBaseFlagPole setPos (getMarkerPos "respawn_West");
 }forEach allPlayers;
 
 onMapSingleClick {};

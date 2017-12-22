@@ -8,18 +8,18 @@ class EditorData
 	toggles=1033;
 	class ItemIDProvider
 	{
-		nextID=67;
+		nextID=90;
 	};
 	class MarkerIDProvider
 	{
-		nextID=9;
+		nextID=11;
 	};
 	class Camera
 	{
-		pos[]={12846.708,25.265574,8013.0557};
-		dir[]={0.91804123,-0.36660069,0.15105149};
-		up[]={0.3617492,0.93037385,0.059519943};
-		aside[]={0.16235441,-6.3807238e-007,-0.98673838};
+		pos[]={13622.49,109.57717,2809.2871};
+		dir[]={0.15944055,-0.28355867,0.94569314};
+		up[]={0.047150675,0.95893407,0.27966768};
+		aside[]={0.98616195,-1.8496066e-006,-0.16626582};
 	};
 };
 binarizationWanted=0;
@@ -33,13 +33,17 @@ addons[]=
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Mil_Helipads",
 	"twc_framework",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Structures_F_Mil_Flags",
+	"CUP_WarfareBuildings",
+	"CUP_StandaloneTerrains_Core_Faction",
+	"CUP_Misc3_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=11;
 		class Item0
 		{
 			className="twc_modern";
@@ -90,6 +94,21 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item8
+		{
+			className="CUP_WarfareBuildings";
+			name="CUP_WarfareBuildings";
+		};
+		class Item9
+		{
+			className="CUP_StandaloneTerrains_Core_Faction";
+			name="CUP_StandaloneTerrains_Core_Faction";
+		};
+		class Item10
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
+		};
 	};
 };
 randomSeed=13183763;
@@ -123,7 +142,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=25;
 		class Item0
 		{
 			dataType="Group";
@@ -1839,11 +1858,12 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={16114.985,81.345093,21692.684};
+			position[]={13724.426,106.253,3073.354};
 			name="respawn_west";
+			text="Blufor Base";
 			type="b_hq";
 			id=24;
-			atlOffset=-45.730835;
+			atlOffset=81.082916;
 		};
 		class Item4
 		{
@@ -2404,12 +2424,86 @@ class Mission
 		};
 		class Item21
 		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13686.712,50.504814,2939.842};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setFlagTexture ""\A3\Data_F\Flags\Flag_nato_CO.paa""}";
+				name="twc_bluforBaseFlagPole";
+			};
+			id=71;
+			type="FlagPole_F";
+		};
+		class Item22
+		{
 			dataType="Marker";
-			position[]={5334.4746,340.54321,8150.2744};
-			name="base";
-			type="Empty";
-			id=54;
-			atlOffset=-14.135345;
+			position[]={13892.01,124.143,2959.28};
+			name="respawn_east";
+			text="Redfor Base";
+			type="o_hq";
+			id=74;
+			atlOffset=93.339005;
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13696.221,44.634792,2879.7102};
+				angles[]={6.2378831,0,0.0026744273};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=87;
+			type="USMC_WarfareBFieldhHospital";
+			atlOffset=-1.9073486e-005;
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13719.758,45.781784,2882.9529};
+				angles[]={6.2365503,4.0074158,6.2605309};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=89;
+			type="Land_fort_artillery_nest";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

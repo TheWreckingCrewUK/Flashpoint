@@ -1,0 +1,1 @@
+hint format["Blu: Score %1 : Towns %2 \n Red: Score %3 : Towns %4 \n Green: Score %5 : Towns %6",twc_bluScore,count twc_bluforBases,twc_redScore, count twc_opforBases, twc_greenScore, count twc_greenBases];

@@ -29,7 +29,6 @@ while{!isNull (findDisplay 9999);}do{
 sleep 0.2;
 systemChat str _selectedIndex;
 if(player getVariable "twc_spawnFromBox")then{
-	_return = [_target,_classname,((_sandBags select _selectedIndex) select 1)] call twc_fnc_spawnDefenses;
-	hint _return;
+	[_target,_classname,((_sandBags select _selectedIndex) select 1)] call twc_fnc_spawnDefenses;
 	player setVariable ["twc_spawnFromBox",false];
 };
