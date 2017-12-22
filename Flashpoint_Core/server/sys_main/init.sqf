@@ -7,7 +7,7 @@ while{runLoop}do{
 	
 	_attackTown = "";
 	{
-		if(str (_x select 1) getVariable "townSide" == "GUER")exitWith{_attackTown = (_x select 1)};
+		if(str ((_x select 1) getVariable "townSide") == "GUER")exitWith{_attackTown = (_x select 1)};
 	}forEach _array;
 	
 	_attackTown setFlagTexture twc_flagTextureRedfor;
