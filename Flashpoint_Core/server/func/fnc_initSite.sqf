@@ -43,8 +43,7 @@ if((getMarkerPos "respawn_east") distance2D _pos < 400)then{
 
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [800, 800, 0, false];
-_trg setTriggerActivation ["WEST", "PRESENT", true];
+_trg setTriggerActivation ["WEST", "PRESENT", false];
 _trg setTriggerStatements ["this", "[thisTrigger getVariable 'triggerflag'] call twc_fnc_createSite", ""];
 
 _trg setVariable ["triggerFlag",_flag];
-_flag setVariable ["townTrigger",_trg];

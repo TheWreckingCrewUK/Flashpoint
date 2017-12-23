@@ -27,13 +27,13 @@ clearItemCargoGlobal _crate;
 _crate addItemCargoGlobal ["TWC_ForwardBase_Supplies", (_supplies - _cost)];
 
 _local = _item createVehicleLocal (getPos player);
-_placeAction = player addAction["PLACE",{
+_placeAction = player addAction["<t color = '#008000'>PLACE</t>",{
 	params["_target","_caller","_id","_arguments"];
 	player setVariable ["twc_placeObject",false];
 	player removeAction _id;
 },nil,6,true,false,"","true",-1,false,""];
 
-_placeMultiple = player addAction["PLACE Multiple",{
+_placeMultiple = player addAction["<t color = '#0000ff'>PLACE Multiple</t>",{
 	params["_target","_caller","_id","_arguments"];
 	_cost = _arguments select 0;
 	_crate = _arguments select 1;
@@ -55,17 +55,17 @@ _placeMultiple = player addAction["PLACE Multiple",{
 	};	
 },[_cost,_crate,_local],6,true,false,"","true",-1,false,""];
 
-_rotateAction = player addAction["Rotate",{
+_rotateAction = player addAction["<t color = '#FF0000'>Rotate</t>",{
 	params["_target","_caller","_id","_arguments"];
 	twc_playerRotation = twc_playerRotation + 45;
 },nil,6,true,false,"","true",-1,false,""];
 
-_fartherAction = player addAction["Farther",{
+_fartherAction = player addAction["<t color = '#ffff00'>Farther</t>",{
 	params["_target","_caller","_id","_arguments"];
 	twc_playerDistance = twc_playerDistance + 2;
 },nil,6,true,false,"","true",-1,false,""];
 
-_closerAction = player addAction["Closer",{
+_closerAction = player addAction["<t color = '#800080'>Closer</t>",{
 	params["_target","_caller","_id","_arguments"];
 	twc_playerDistance = twc_playerDistance - 2;
 },nil,6,true,false,"","true",-1,false,""];

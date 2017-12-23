@@ -35,7 +35,7 @@
 			};
 			(_this select 0) drawLine [
 				(_town getVariable "townPos"),
-				getPos _x,
+				(_x getVariable "townPos"),
 				_color
 			];
 		}forEach (_x getVariable "TransportLines");

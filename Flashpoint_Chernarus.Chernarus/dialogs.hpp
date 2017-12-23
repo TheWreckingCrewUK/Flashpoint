@@ -131,49 +131,85 @@ class twc_commander_dialog
 	
 	class controls
 	{
-		
 ////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT START (by jayman, v1.063, #Zijuvu)
+// GUI EDITOR OUTPUT START (by jayman, v1.063, #Fywato)
 ////////////////////////////////////////////////////////
 
 class twc_flashpoint_commandermenu_background: RscPicture
 {
 	idc = 1201;
+
 	text = "#(argb,8,8,3)color(01,0.647,0,0.75)";
-	x = 0.355625 * safezoneW + safezoneX;
-	y = 0.28 * safezoneH + safezoneY;
+	x = 0.365937 * safezoneW + safezoneX;
+	y = 0.313 * safezoneH + safezoneY;
 	w = 0.273281 * safezoneW;
-	h = 0.374 * safezoneH;
+	h = 0.352 * safezoneH;
 };
 class twc_flashpoint_commandermenu_cancel: RscButton
 {
 	idc = 1600;
+	action = "closeDialog 0;";
+
 	text = "Close"; //--- ToDo: Localize;
-	x = 0.525781 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
+	x = 0.536094 * safezoneW + safezoneX;
+	y = 0.599 * safezoneH + safezoneY;
 	w = 0.0876563 * safezoneW;
 	h = 0.044 * safezoneH;
-	action = "closeDialog 0;";
 };
 class twc_flashpoint_commandermenu_recon: RscButton
 {
 	idc = 1601;
-	text = "UAV Recon"; //--- ToDo: Localize;
-	x = 0.365937 * safezoneW + safezoneX;
-	y = 0.324 * safezoneH + safezoneY;
-	w = 0.0928125 * safezoneW;
-	h = 0.044 * safezoneH;
 	action = "closeDialog 0; [] spawn twc_fnc_commanderUAV;";
+
+	text = "UAV Recon"; //--- ToDo: Localize;
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.0825 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 class twc_flashpoint_commandermenu_airstrike: RscButton
 {
 	idc = 1602;
-	text = "Airstrike"; //--- ToDo: Localize;
-	x = 0.5 * safezoneW + safezoneX;
-	y = 0.324 * safezoneH + safezoneY;
-	w = 0.0773437 * safezoneW;
-	h = 0.044 * safezoneH;
 	action = "closeDialog 0; [] spawn twc_fnc_commanderCasBomb;";
+
+	text = "Airstrike"; //--- ToDo: Localize;
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.445 * safezoneH + safezoneY;
+	w = 0.0825 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class twc_flashpoint_commandermenu_mortar: RscButton
+{
+	idc = 1603;
+	action = "closeDialog 0; [] spawn twc_fnc_commanderMortar;";
+
+	text = "Mortar Strike"; //--- ToDo: Localize;
+	x = 0.396875 * safezoneW + safezoneX;
+	y = 0.445 * safezoneH + safezoneY;
+	w = 0.0825 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class twc_flashpoint_commandermenu_rocket: RscButton
+{
+	idc = 1604;
+	action = "closeDialog 0; [] spawn twc_fnc_commanderRocket;";
+
+	text = "Rocket Strike"; //--- ToDo: Localize;
+	x = 0.396875 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0825 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class twc_flashpoint_commandermenu_missionStatus: RscButton
+{
+	idc = 1605;
+	action = "[] spawn twc_fnc_missionStatus;";
+
+	text = "Mission Status"; //--- ToDo: Localize;
+	x = 0.396875 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.0825 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END
@@ -188,77 +224,106 @@ class twc_flashpoint_flagmenu_dialog
 	class controls
 	{
 ////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT START (by jayman, v1.063, #Bonogu)
+// GUI EDITOR OUTPUT START (by jayman, v1.063, #Bafura)
 ////////////////////////////////////////////////////////
 
 class twc_flashpoint_flagmenu_background: RscPicture
 {
 	idc = 1202;
-	x = 0.360781 * safezoneW + safezoneX;
-	y = 0.28 * safezoneH + safezoneY;
-	w = 0.268125 * safezoneW;
-	h = 0.407 * safezoneH;
+
 	text = "#(argb,8,8,3)color(01,0.647,0,0.75)";
+	x = 0.37625 * safezoneW + safezoneX;
+	y = 0.291 * safezoneH + safezoneY;
+	w = 0.2475 * safezoneW;
+	h = 0.396 * safezoneH;
 };
 class twc_flashpoint_flagMenu_Close: RscButton
 {
 	idc = 1600;
-	text = "Close"; //--- ToDo: Localize;
-	x = 0.561875 * safezoneW + safezoneX;
-	y = 0.632 * safezoneH + safezoneY;
-	w = 0.0567187 * safezoneW;
-	h = 0.044 * safezoneH;
 	action = "closeDialog 0;";
+
+	text = "Close"; //--- ToDo: Localize;
+	x = 0.551562 * safezoneW + safezoneX;
+	y = 0.621 * safezoneH + safezoneY;
+	w = 0.061875 * safezoneW;
+	h = 0.044 * safezoneH;
 };
 class twc_flashpoint_flagmenu_aaunit: RscButton
 {
 	idc = 1601;
-	text = "AA Unit"; //--- ToDo: Localize;
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.313 * safezoneH + safezoneY;
-	w = 0.0670312 * safezoneW;
-	h = 0.055 * safezoneH;
 	action = "[] call twc_fnc_spawnFlagAA";
+
+	text = "AA Unit"; //--- ToDo: Localize;
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.313 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 class twc_flashpoint_flagmenu_supplies: RscButton
 {
 	idc = 1602;
-	text = "Supplies Box"; //--- ToDo: Localize;
-	x = 0.396875 * safezoneW + safezoneX;
-	y = 0.324 * safezoneH + safezoneY;
-	w = 0.0721875 * safezoneW;
-	h = 0.044 * safezoneH;
 	action = """twc_SuppliesBox"" createVehicle (position player);";
+
+	text = "Supplies Box"; //--- ToDo: Localize;
+	x = 0.407187 * safezoneW + safezoneX;
+	y = 0.401 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 class twc_flashpoint_flagmenu_editBase: RscButton
 {
 	idc = 1603;
-	text = "Edit Base"; //--- ToDo: Localize;
-	x = 0.402031 * safezoneW + safezoneX;
-	y = 0.61 * safezoneH + safezoneY;
-	w = 0.0773437 * safezoneW;
-	h = 0.044 * safezoneH;
 	action = "if((getPos player)distance2D (getPos twc_bluforBaseFlagPole) < 50)then{closeDialog 0; [] spawn twc_fnc_editBase}else{hint ""You can only edit the blufor main base""};";
+
+	text = "Edit Base"; //--- ToDo: Localize;
+	x = 0.407187 * safezoneW + safezoneX;
+	y = 0.489 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 class twc_flashpoint_flagmenu_commanderTravel: RscButton
 {
 	idc = 1604;
-	text = "Commander Travel"; //--- ToDo: Localize;
-	x = 0.391719 * safezoneW + safezoneX;
-	y = 0.456 * safezoneH + safezoneY;
-	w = 0.0825 * safezoneW;
-	h = 0.055 * safezoneH;
 	action = "closeDialog 0; [] spawn twc_fnc_commanderFlagTravel;";
+
+	text = "Commander Travel"; //--- ToDo: Localize;
+	x = 0.407187 * safezoneW + safezoneX;
+	y = 0.313 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 class twc_flashpoint_flagmenu_buyUnits: RscButton
 {
 	idc = 1605;
-	text = "Units"; //--- ToDo: Localize;
-	x = 0.525781 * safezoneW + safezoneX;
-	y = 0.456 * safezoneH + safezoneY;
-	w = 0.0825 * safezoneW;
-	h = 0.055 * safezoneH;
 	action = "hint ""Not Yet Implemented""";
+
+	text = "Units"; //--- ToDo: Localize;
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.401 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class twc_flashpoint_flagmenu_deleteFortifications: RscButton
+{
+	idc = 1606;
+	action = "closeDialog 0; hint ""Not yet Implemented""";
+
+	text = "Delete Fortifications"; //--- ToDo: Localize;
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.489 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class twc_flashpoint_flagmenu_special: RscButton
+{
+	idc = 1607;
+	action = "closeDialog 0; hint ""Not yet Implemented""";
+
+	text = "Special"; //--- ToDo: Localize;
+	x = 0.407187 * safezoneW + safezoneX;
+	y = 0.577 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.066 * safezoneH;
 };
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT END

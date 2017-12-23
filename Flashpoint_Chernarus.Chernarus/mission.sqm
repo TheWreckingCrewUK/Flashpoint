@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13622.49,109.57717,2809.2871};
-		dir[]={0.15944055,-0.28355867,0.94569314};
-		up[]={0.047150675,0.95893407,0.27966768};
-		aside[]={0.98616195,-1.8496066e-006,-0.16626582};
+		pos[]={13700.065,60.319878,2901.9399};
+		dir[]={-0.53831136,-0.47317925,0.69754225};
+		up[]={-0.28908855,0.88095248,0.37460127};
+		aside[]={0.79177612,2.9429793e-006,0.61102229};
 	};
 };
 binarizationWanted=0;
@@ -34,16 +34,13 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"twc_framework",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Structures_F_Mil_Flags",
-	"CUP_WarfareBuildings",
-	"CUP_StandaloneTerrains_Core_Faction",
-	"CUP_Misc3_Config"
+	"A3_Structures_F_Mil_Flags"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=8;
 		class Item0
 		{
 			className="twc_modern";
@@ -94,21 +91,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
-		{
-			className="CUP_WarfareBuildings";
-			name="CUP_WarfareBuildings";
-		};
-		class Item9
-		{
-			className="CUP_StandaloneTerrains_Core_Faction";
-			name="CUP_StandaloneTerrains_Core_Faction";
-		};
-		class Item10
-		{
-			className="CUP_Misc3_Config";
-			name="CUP_Misc3_Config";
-		};
 	};
 };
 randomSeed=13183763;
@@ -142,7 +124,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=25;
+		items=23;
 		class Item0
 		{
 			dataType="Group";
@@ -2448,62 +2430,6 @@ class Mission
 			type="o_hq";
 			id=74;
 			atlOffset=93.339005;
-		};
-		class Item23
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={13696.221,44.634792,2879.7102};
-				angles[]={6.2378831,0,0.0026744273};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=87;
-			type="USMC_WarfareBFieldhHospital";
-			atlOffset=-1.9073486e-005;
-		};
-		class Item24
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={13719.758,45.781784,2882.9529};
-				angles[]={6.2365503,4.0074158,6.2605309};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=89;
-			type="Land_fort_artillery_nest";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 	};
 };

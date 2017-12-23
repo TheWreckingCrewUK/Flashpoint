@@ -13,7 +13,7 @@ twc_commanderTMenu = (findDisplay 46) displayAddEventHandler ["KeyDown", {
 
 //removeAllActions player;
 
-player addAction ["Flag Control",{
+player addAction ["<t color = '#CC4D00'>Flag Control</t>",{
 	params["_target","_caller","_id","_arguments"];
 	createDialog "twc_flashpoint_flagmenu_dialog";
 	

@@ -13,12 +13,21 @@ waitUntil {!visibleMap};
 if("[0,0,0]" != str (player getVariable "twc_commanderReconPos"))then{
 	_pos = player getVariable "twc_commanderReconPos";
 	hint format["Recon at %1",_pos];
+	_time = call cTab_fnc_currentTime;
 	
 	_vehicles = nearestObjects [_pos,["Car","Truck","Tank"],1000];
 	_men = nearestObjects [_pos,["Man"],1000];
-	_numVehicles = {side _x != west}count _vehicles;
-	_numMen = {side _x != west}count _men;
-	hint format ["Vehicles : %1 \n Men : %2",_numVehicles,_numMen];
+	{
+		if(side _x != west)then{
+			["b",[(getPos _x),3,0,0,_time]]call cTab_fnc_addUserMarker;
+		};
+	}forEach _vehicles;
+	{
+		if(leader _x == _x && side _x != west)then{
+			["b",[(getPos _x),0,0,0,_time]]call cTab_fnc_addUserMarker;
+		};
+	}forEach _men;
+	hint "Hostile Positions marked on the CTAB";
 }else{
 	hint "You didn't select anywhere to Recon";
 };
