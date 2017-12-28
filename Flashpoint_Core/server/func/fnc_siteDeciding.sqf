@@ -1,5 +1,7 @@
 params["_flag","_thisList"];
 
+_flag setVariable ["TownCombat",false];
+
 _marker = _flag getVariable "townMarker";
 _side = _flag getVariable "townSide";
 
@@ -28,6 +30,18 @@ if(west countSide _thisList == 0)exitWith{
 
 	_trg setVariable ["triggerFlag",_flag];
 };
+
+{
+	if(str (_x getVariable "twc_unitFlag") == str _flag)then{
+		{
+			if((vehicle _x) != _x)then{deleteVehicle (vehicle _x)};
+			deleteVehicle _x
+		}forEach units _x;
+	};
+}forEach allGroups;
+{
+	deleteVehicle _x
+}forEach allDeadMen;
 
 _marker setMarkerColor "colorWest";
 _flag setVariable ["townSide",West];

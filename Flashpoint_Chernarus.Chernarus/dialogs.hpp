@@ -306,7 +306,7 @@ class twc_flashpoint_flagmenu_buyUnits: RscButton
 class twc_flashpoint_flagmenu_deleteFortifications: RscButton
 {
 	idc = 1606;
-	action = "closeDialog 0; hint ""Not yet Implemented""";
+	action = "closeDialog 0; [] call twc_fnc_addDeleteFortificationsAction";
 
 	text = "Delete Fortifications"; //--- ToDo: Localize;
 	x = 0.520625 * safezoneW + safezoneX;

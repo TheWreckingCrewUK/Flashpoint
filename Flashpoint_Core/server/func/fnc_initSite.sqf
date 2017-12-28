@@ -16,6 +16,7 @@ _markerstr setMarkerShape "icon";
 _markerstr setMarkerType _type;
 _flag setVariable ["townMarker",_markerstr];
 _flag setVariable ["townValue",_value];
+_flag setVariable ["TownCombat",false];
 
 //Sets the flags transport distance
 _flag setVariable ["twc_transportDistance",_transportDistance];

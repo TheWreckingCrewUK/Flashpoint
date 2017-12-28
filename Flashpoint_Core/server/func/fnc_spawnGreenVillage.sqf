@@ -1,5 +1,7 @@
 params["_flag"];
 
+_flag setVariable ["TownCombat",true];
+
 _pos = _flag getVariable "townPos";
 _points = twc_greenScore;
 _power = _points * (count twc_greenBases);
@@ -48,6 +50,8 @@ if(_power > 750)then{
 	{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
 	[_group,_spawnPos, 200,5,"MOVE","AWARE","YELLOW"] call CBA_fnc_taskPatrol;
 };
+
+[_flag] spawn twc_fnc_greenCombatBrain;
 
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [800, 800, 0, false];

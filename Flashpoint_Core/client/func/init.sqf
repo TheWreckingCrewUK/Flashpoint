@@ -3,6 +3,7 @@ twc_fnc_addBaseCreationActions = compile preprocessfilelinenumbers "Flashpoint_C
 twc_fnc_showSandBagItems = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_showSandBagItems.sqf";
 twc_fnc_spawnDefenses = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_spawnDefenses.sqf";
 twc_fnc_editBase = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_editBase.sqf";
+twc_fnc_addDeleteFortificationsAction= compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_addDeleteFortificationsAction.sqf";
 
 twc_fnc_updateTownLines = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_updateTownLines.sqf";
 

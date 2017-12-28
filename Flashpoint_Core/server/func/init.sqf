@@ -15,5 +15,6 @@ twc_fnc_bombRun = compile preprocessfilelinenumbers "Flashpoint_Core\server\func
 
 
 twc_fnc_spawnGreenVillage = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnGreenVillage.sqf";
+twc_fnc_greenCombatBrain = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_greenCombatBrain.sqf";
 
 twc_fnc_spawnRedVillage = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnRedVillage.sqf";

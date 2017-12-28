@@ -62,11 +62,13 @@ _rotateAction = player addAction["<t color = '#FF0000'>Rotate</t>",{
 
 _fartherAction = player addAction["<t color = '#ffff00'>Farther</t>",{
 	params["_target","_caller","_id","_arguments"];
+	if(twc_playerDistance > 15)exitWith{hint "You cannot Move the Object any Farther Away"};
 	twc_playerDistance = twc_playerDistance + 2;
 },nil,6,true,false,"","true",-1,false,""];
 
 _closerAction = player addAction["<t color = '#800080'>Closer</t>",{
 	params["_target","_caller","_id","_arguments"];
+	if(twc_playerDistance < 2)exitWith{hint "You cannot Move the Object any closer"};
 	twc_playerDistance = twc_playerDistance - 2;
 },nil,6,true,false,"","true",-1,false,""];
 
@@ -88,6 +90,7 @@ _global = _item createVehicle _pos;
 _global setDir _dir;
 _global setPos _pos;
 _global setVariable ["twc_playerPlaced",true,true];
+twc_playerDistance = nil;
 twc_playerRotation = nil;
 
 if(_item == "USMC_WarefareBFieldhHospital")then{
