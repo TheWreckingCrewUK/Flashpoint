@@ -10,6 +10,8 @@ twc_fnc_updateTownLines = compile preprocessfilelinenumbers "Flashpoint_Core\cli
 twc_fnc_commanderFlagOptions = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderFlagOptions.sqf";
 twc_fnc_commanderFlagTravel = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderFlagTravel.sqf";
 twc_fnc_spawnFlagAA = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_spawnFlagAA.sqf";
+twc_fnc_airDropSupplies = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_airDropSupplies.sqf";
+
 
 
 twc_fnc_missionStatus = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_missionStatus.sqf";

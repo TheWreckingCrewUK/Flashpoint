@@ -54,6 +54,41 @@ while{_flag getVariable "townCombat"}do{
 			[_group, _pos, 100] call CBA_fnc_taskAttack;
 			{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
 		};
+		//If they have the points they will try to flank attack with a btr and inf
+		if(twc_greenScore > 200)exitWith{
+		systemChat "Hostiles have deciding a flanking attack";
+		twc_greenScore = twc_greenScore - 200;
+		_bluUnits = [];
+		{
+			if(side _x == west)then{
+				_bluUnits pushback _x;
+			};
+		}forEach _allUnits;
+		_randUnit = _bluUnits call bis_fnc_selectRandom;
+		_dir = [_flag,_randUnit] call bis_Fnc_dirTo;
+		_rand = random 100;
+		if(_rand > 50)then{_dir = _dir + 30}else{_dir = _dir - 30};
+		_spawnPos = [_pos,[600,800],_dir,0,[0,100]] call SHK_pos;
+		_btr = twc_greenforBTR60 createVehicle _spawnPos;
+		createVehicleCrew _btr;
+		_group = group (driver _btr);
+		_group deleteGroupWhenEmpty true;
+		{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
+		_wp =_group addWaypoint [getPos _randUnit, 0];
+		};
+		//If blufor is grouped up and known about call in a mortar
+		_bluUnits = [];
+		{
+			if(side _x == west)then{
+				_bluUnits pushback _x;
+			};
+		}forEach _allUnits;
+		_randUnit = _bluUnits call bis_fnc_selectRandom;
+		_nearBlu = nearestObjects[(getPos _randUnit),["Man"],200];
+		if(Independent knowsAbout _randUnit > 1 && twc_greenScore > 25 && west countSide _nearBlu > 4)exitWith{
+			twc_greenScore = twc_greenScore - 25;
+			[(getPos _randUnit),100,4,"HE",3] spawn twc_fnc_virtualMortar;
+		};
 		systemChat format["Flag at %1 has chosen to do nothing",_flag getVariable "townPos"];
 	};
 	//This code is bad, but we needed a sleep where it couldn't double brain

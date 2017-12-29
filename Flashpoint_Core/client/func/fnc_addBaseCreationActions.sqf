@@ -35,7 +35,7 @@ twc_bluforBaseFlagPole setVariable ["townPos",(getMarkerPos "respawn_West")];
 twc_bluforBaseFlagPole setVariable ["townValue",100];
 twc_bluforBases pushback twc_bluforBaseFlagPole;
 
-_box = "twc_SuppliesBox" createVehicle (position vehicleSpawnPad);
+[player] call twc_fnc_airDropSupplies;
 
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetAmmoSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;

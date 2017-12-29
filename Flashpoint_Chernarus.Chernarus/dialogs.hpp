@@ -262,7 +262,7 @@ class twc_flashpoint_flagmenu_aaunit: RscButton
 class twc_flashpoint_flagmenu_supplies: RscButton
 {
 	idc = 1602;
-	action = """twc_SuppliesBox"" createVehicle (position player);";
+	action = "[player] call twc_fnc_airDropSupplies";
 
 	text = "Supplies Box"; //--- ToDo: Localize;
 	x = 0.407187 * safezoneW + safezoneX;
