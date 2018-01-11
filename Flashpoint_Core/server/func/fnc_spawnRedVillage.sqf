@@ -56,3 +56,12 @@ _trg setTriggerActivation ["ANY", "PRESENT", true];
 _trg setTriggerStatements ["West countSide thisList == 0 ||  East countSide thisList < 4", "[thisTrigger getVariable 'triggerflag',thisList] call twc_fnc_siteDeciding", ""];
 
 _trg setVariable ["triggerFlag",_flag];
+
+_detectTrg = createTrigger ["EmptyDetector", _pos];
+_detectTrg setTriggerArea [800, 800, 0, false];
+_detectTrg setTriggerActivation ["WEST", "EAST D", false];
+_detectTrg setTriggerTimeout [1,1,1,false];
+_detectTrg setTriggerStatements ["this", "hint 'detected';[thisTrigger getVariable 'triggerflag'] spawn twc_fnc_redCombatBrain", ""];
+
+_trg setVariable ["detectTrigger",_detectTrg];
+_detectTrg setVariable ["triggerFlag",_flag];

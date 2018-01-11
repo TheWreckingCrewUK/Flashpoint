@@ -1,4 +1,6 @@
-params["_flag","_thisList"];
+params["_flag","_thisList","_detectTrigger"];
+
+if(!(isNil "_detectTrigger"))then{deleteVehicle _detectTrigger};
 
 _flag setVariable ["TownCombat",false];
 
@@ -52,4 +54,7 @@ if(_side == east)then{
 }else{
 	twc_greenBases = twc_greenBases - [_flag];
 };
+
+[] call twc_fnc_reCalcBaseConnection;
+
 remoteExecCall ["twc_fnc_updateTownLines",0];

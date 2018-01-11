@@ -13,7 +13,7 @@ _actionVehicleSpawn = ["FlashpointVehicleSpawn","Set Vehicle Spawn","",{vehicleS
 _actionHelicopterSpawn = ["FlashpointHelicopterSpawn","Set Helicopter Spawn","",{helicopterSpawnPad setPos (getPos player); helicopterSpawnPad setDir (getDir player)},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions","BaseListAction"], _actionHelicopterSpawn] call ace_interact_menu_fnc_addActionToObject;
 
-_actionFinishBase = ["FlashpointFinishBase","Finish Base","",{Hint "Base Finished"; twc_baseDone = true; publicVariable "twc_baseDone"},{(getPos player) distance2D (getMarkerPos "respawn_West") < 200 && (getPos player) distance2D (getPos crateBox) < 200 && (getPos player) distance2D (getPos vehicleSpawnPad) < 200 && (getPos player) distance2D (getPos helicopterSpawnPad) < 200}] call ace_interact_menu_fnc_createAction;
+_actionFinishBase = ["FlashpointFinishBase","Finish Base","",{Hint "Base Finished"; twc_baseDone = true; publicVariable "twc_baseDone"},{[_player] call twc_fnc_isBaseValid}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions","BaseListAction"], _actionFinishBase] call ace_interact_menu_fnc_addActionToObject;
 
 _actionRestartBase = ["FlashpointRestartBase","Restart","",{{_x setPos (getPos StartingStand)}forEach allPlayers;},{true}] call ace_interact_menu_fnc_createAction;
@@ -33,9 +33,10 @@ twc_bluforBaseFlagPole setVariable ["twc_transportDistance",twc_baseTransportDis
 twc_bluforBaseFlagPole setVariable ["twc_mainBase",true];
 twc_bluforBaseFlagPole setVariable ["townPos",(getMarkerPos "respawn_West")];
 twc_bluforBaseFlagPole setVariable ["townValue",100];
+twc_bluforBaseFlagPole setVariable ["connectedToBase",true,true];
 twc_bluforBases pushback twc_bluforBaseFlagPole;
 
-[player] call twc_fnc_airDropSupplies;
+[player] spawn twc_fnc_airDropSupplies;
 
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetAmmoSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;

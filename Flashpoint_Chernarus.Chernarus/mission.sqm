@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13691.234,55.325459,2918.3228};
-		dir[]={-0.69296414,-0.23417224,0.68206137};
-		up[]={-0.16691908,0.97217333,0.16429403};
-		aside[]={0.70157605,5.8440492e-007,0.71277702};
+		pos[]={13723.654,118.31709,2856.1711};
+		dir[]={-0.36157623,-0.77269638,0.52196109};
+		up[]={-0.44005585,0.63464653,0.63525206};
+		aside[]={0.82214236,4.5292545e-006,0.56950676};
 	};
 };
 binarizationWanted=0;
@@ -28,7 +28,6 @@ addons[]=
 	"twc_modern",
 	"A3_Ui_F",
 	"twc_framework_public_modern_us",
-	"ace_map",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Mil_Helipads",
@@ -40,7 +39,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=7;
 		class Item0
 		{
 			className="twc_modern";
@@ -60,31 +59,24 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="ace_map";
-			name="ACE3 - Map";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item4
-		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="twc_framework";
 			name="twc_framework";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
@@ -1870,7 +1862,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13669.241,46.599277,2929.4302};
+				position[]={13669.174,46.567329,2929.126};
 				angles[]={0,2.4494932,0.087773547};
 			};
 			side="Empty";
@@ -1881,7 +1873,7 @@ class Mission
 			};
 			id=26;
 			type="Land_HBarrier_Big_F";
-			atlOffset=0.026012421;
+			atlOffset=-5.3405762e-005;
 		};
 		class Item6
 		{

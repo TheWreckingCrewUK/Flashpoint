@@ -17,9 +17,10 @@ _markerstr setMarkerType _type;
 _flag setVariable ["townMarker",_markerstr];
 _flag setVariable ["townValue",_value];
 _flag setVariable ["TownCombat",false];
+_flag setVariable ["connectedToBase",false,true];
 
 //Sets the flags transport distance
-_flag setVariable ["twc_transportDistance",_transportDistance];
+_flag setVariable ["twc_transportDistance",_transportDistance,true];
 
 //Figures out if it starts red or blue or Independent
 if((getMarkerPos "respawn_east") distance2D _pos < 400)then{
@@ -33,6 +34,7 @@ if((getMarkerPos "respawn_east") distance2D _pos < 400)then{
 		_flag setVariable ["townSide",West];
 		_flag setFlagTexture twc_flagTextureBlufor;
 		twc_bluforBases pushback _flag;
+		_flag setVariable ["connectedToBase",true,true];
 	}else{
 		_markerstr setMarkerColor "colorIndependent";
 		_flag setVariable ["townSide",Independent];

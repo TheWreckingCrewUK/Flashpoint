@@ -51,11 +51,18 @@ if(_power > 750)then{
 	[_group,_spawnPos, 200,5,"MOVE","AWARE","YELLOW"] call CBA_fnc_taskPatrol;
 };
 
-[_flag] spawn twc_fnc_greenCombatBrain;
-
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [800, 800, 0, false];
 _trg setTriggerActivation ["ANY", "PRESENT", false];
-_trg setTriggerStatements ["West countSide thisList == 0 || Independent countSide thisList < 4", "[thisTrigger getVariable 'triggerflag',thisList] call twc_fnc_siteDeciding", ""];
+_trg setTriggerStatements ["West countSide thisList == 0 || Independent countSide thisList < 4", "[thisTrigger getVariable 'triggerflag',thisList,thisTrigger getVariable 'detectTrigger'] call twc_fnc_siteDeciding", ""];
 
 _trg setVariable ["triggerFlag",_flag];
+
+_detectTrg = createTrigger ["EmptyDetector", _pos];
+_detectTrg setTriggerArea [800, 800, 0, false];
+_detectTrg setTriggerActivation ["WEST", "GUER D", false];
+_detectTrg setTriggerTimeout [1,1,1,false];
+_detectTrg setTriggerStatements ["this", "hint 'detected';[thisTrigger getVariable 'triggerflag'] spawn twc_fnc_greenCombatBrain", ""];
+
+_trg setVariable ["detectTrigger",_detectTrg];
+_detectTrg setVariable ["triggerFlag",_flag];
