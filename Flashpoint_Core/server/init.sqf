@@ -1,3 +1,4 @@
+#include "defines.sqf";
 #include "func\init.sqf";
 #include "sys_units\init.sqf";
 //Waits until players set up the base

@@ -13,11 +13,12 @@ twc_fnc_calcScore = compile preprocessfilelinenumbers "Flashpoint_Core\server\fu
 
 twc_fnc_bombRun = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_bombRun.sqf";
 
-
 twc_fnc_spawnGreenVillage = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnGreenVillage.sqf";
+twc_fnc_spawnGreenCity = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnGreenCity.sqf";
 twc_fnc_greenCombatBrain = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_greenCombatBrain.sqf";
 
 twc_fnc_spawnRedVillage = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnRedVillage.sqf";
+twc_fnc_spawnRedCity = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_spawnRedCity.sqf";
 twc_fnc_redCombatBrain = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_redCombatBrain.sqf";
 
 twc_fnc_updatePoints = compile preprocessfilelinenumbers "Flashpoint_Core\server\func\fnc_updatePoints.sqf";

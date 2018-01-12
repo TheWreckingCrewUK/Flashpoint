@@ -9,13 +9,13 @@ _marker setMarkerColor "colorYellow";
 if(_side == independent)then{
 	[]call{
 		if(_type == twc_villageFlag)exitWith{[_flag]spawn twc_fnc_spawnGreenVillage};
-		if(_type == twc_cityFlag)exitWith{[_flag]spawn twc_fnc_spawnGreenVillage};
-		if(_type == twc_capitalFlag)exitWith{[_flag]spawn twc_fnc_spawnGreenVillage};
+		if(_type == twc_cityFlag)exitWith{[_flag]spawn twc_fnc_spawnGreenCity};
+		if(_type == twc_capitalFlag)exitWith{[_flag]spawn twc_fnc_spawnGreenCity};
 	};
 }else{
 	[]call{
 		if(_type == twc_villageFlag)exitWith{[_flag]spawn twc_fnc_spawnRedVillage};
-		if(_type == twc_cityFlag)exitWith{[_flag]spawn twc_fnc_spawnRedVillage};
-		if(_type == twc_capitalFlag)exitWith{[_flag]spawn twc_fnc_spawnRedVillage};
+		if(_type == twc_cityFlag)exitWith{[_flag]spawn twc_fnc_spawnRedCity};
+		if(_type == twc_capitalFlag)exitWith{[_flag]spawn twc_fnc_spawnRedCity};
 	};
 };

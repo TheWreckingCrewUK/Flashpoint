@@ -6,21 +6,33 @@ _pos = _flag getVariable "townPos";
 _points = twc_greenScore;
 _power = _points * (count twc_greenBases);
 _playerCount = count allPlayers;
-_playerCount = ceil (_playerCount / 6);
+_playerCount = ceil (_playerCount / 3);
 
-_spawnPos = [_pos,[100,200],random 360,0,[1,100]] call SHK_pos;
-_group = [_spawnPos,independent,twc_greenforSquadAA] call BIS_fnc_spawnGroup;
-_group deleteGroupWhenEmpty true;
-{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
-[_group,_spawnPos, 200,5,"MOVE","SAFE","YELLOW","LIMITED","COLUMN"] call CBA_fnc_taskPatrol;
+for "_i" from 0 to 2 do{
+	_spawnPos = [_pos,[100,200],random 360,0,[1,100]] call SHK_pos;
+	_group = [_spawnPos,independent,twc_greenforSquadAA] call BIS_fnc_spawnGroup;
+	_group deleteGroupWhenEmpty true;
+	{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
+	[_group,_spawnPos, 200,5,"MOVE","SAFE","YELLOW","LIMITED","COLUMN"] call CBA_fnc_taskPatrol;
+};
 
-_spawnPos = [_pos,[100,200],random 360,0,[1,100]] call SHK_pos;
-_group = [_spawnPos,independent,twc_greenforSquadAT] call BIS_fnc_spawnGroup;
-_group deleteGroupWhenEmpty true;
-{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
-[_group,_spawnPos, 200,5,"MOVE","SAFE","YELLOW","LIMITED","COLUMN"] call CBA_fnc_taskPatrol;
+for "_i" from 0 to 2 do{
+	_spawnPos = [_pos,[100,200],random 360,0,[1,100]] call SHK_pos;
+	_group = [_spawnPos,independent,twc_greenforSquadAT] call BIS_fnc_spawnGroup;
+	_group deleteGroupWhenEmpty true;
+	{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
+	[_group,_spawnPos, 200,5,"MOVE","SAFE","YELLOW","LIMITED","COLUMN"] call CBA_fnc_taskPatrol;
+};
 
-_homeArray = nearestObjects [_pos, twc_stationaryBuildings, 300];
+for "_i" from 0 to 4 do {
+	_spawnPos = [_pos,[100,400],random 360,0,[1,100]] call SHK_pos;
+	_group = [_spawnPos,independent,twc_greenforSquad] call BIS_fnc_spawnGroup;
+	_group deleteGroupWhenEmpty true;
+	{_group setVariable ["twc_unitFlag",_flag]}forEach units _group;
+	[_group,_spawnPos, 200,5,"MOVE","SAFE","YELLOW","LIMITED","COLUMN"] call CBA_fnc_taskPatrol;
+};
+
+_homeArray = nearestObjects [_pos, twc_stationaryBuildings, 400];
 _num = 0;
 while{count _homeArray > 0}do{
 	_building = _homeArray call bis_fnc_selectRandom;

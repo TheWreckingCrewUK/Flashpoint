@@ -13,7 +13,7 @@ params[""];
 	};
 }forEach twc_opforBases;
 
-for "_i" from 0 to (count twc_bluforBases)do{
+for "_i" from 0 to ((count twc_bluforBases) - 1)do{
 	_y = twc_bluforBases select _i;
 	{
 		if(_x getVariable "connectedToBase")then{
@@ -24,7 +24,7 @@ for "_i" from 0 to (count twc_bluforBases)do{
 	}foreach (_y getVariable "TransportLines");
 };
 
-for "_i" from 0 to (count twc_opforBases)do{
+for "_i" from 0 to ((count twc_opforBases) - 1)do{
 	_y = twc_opforBases select _i;
 	{
 		if(_x getVariable "connectedToBase")then{

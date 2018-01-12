@@ -20,3 +20,5 @@ twc_redforSquadAT = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >>
 
 twc_redforBTR = "rhs_btr70_msv";
 twc_redforBMP = "rhs_bmp2_msv";
+twc_redforAA = "CUP_0_2S6M_RU";
+twc_redforTank = "rhs_t90a_tv";
