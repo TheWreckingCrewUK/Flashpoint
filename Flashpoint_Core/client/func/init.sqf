@@ -11,7 +11,7 @@ twc_fnc_updateTownLines = compile preprocessfilelinenumbers "Flashpoint_Core\cli
 twc_fnc_commanderFlagOptions = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderFlagOptions.sqf";
 twc_fnc_commanderFlagTravel = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderFlagTravel.sqf";
 twc_fnc_spawnFlagAA = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_spawnFlagAA.sqf";
-twc_fnc_airDropSupplies = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_airDropSupplies.sqf";
+twc_fnc_getSupplies = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_getSupplies.sqf";
 
 
 
@@ -20,3 +20,8 @@ twc_fnc_commanderUAV = compile preprocessfilelinenumbers "Flashpoint_Core\client
 twc_fnc_commanderMortar = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderMortar.sqf";
 twc_fnc_commanderCASBomb = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderCasBomb.sqf";
 twc_fnc_commanderRocket = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_commanderRocket.sqf";
+
+twc_fnc_showSpawnableHelos = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_showSpawnableHelos.sqf";
+twc_fnc_spawnHelo = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_spawnHelo.sqf";
+twc_fnc_showSpawnableVehicles = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_showSpawnableVehicles.sqf";
+twc_fnc_spawnVehicle = compile preprocessfilelinenumbers "Flashpoint_Core\client\func\fnc_spawnVehicle.sqf";

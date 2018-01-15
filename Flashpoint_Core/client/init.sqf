@@ -1,6 +1,7 @@
 #include "func\init.sqf";
 #include "sys_player\init.sqf";
 #include "sys_diary\init.sqf";
+#include "sys_vehicles\init.sqf";
 
 execVM "Flashpoint_Core\client\sys_commander\init.sqf";
 

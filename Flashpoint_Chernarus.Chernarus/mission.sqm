@@ -8,7 +8,7 @@ class EditorData
 	toggles=1033;
 	class ItemIDProvider
 	{
-		nextID=90;
+		nextID=94;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13723.654,118.31709,2856.1711};
-		dir[]={-0.36157623,-0.77269638,0.52196109};
-		up[]={-0.44005585,0.63464653,0.63525206};
-		aside[]={0.82214236,4.5292545e-006,0.56950676};
+		pos[]={13765.818,57.146919,2879.4792};
+		dir[]={-0.66012377,-0.47480473,0.58215678};
+		up[]={-0.35626212,0.87998199,0.3141841};
+		aside[]={0.6614663,5.7683792e-007,0.75005251};
 	};
 };
 binarizationWanted=0;
@@ -116,7 +116,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=23;
+		items=25;
 		class Item0
 		{
 			dataType="Group";
@@ -792,8 +792,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13678.044,46.020836,2923.1521};
-						angles[]={0,0.31990141,0};
+						position[]={13689.851,45.988861,2890.271};
+						angles[]={0,5.798111,0};
 					};
 					side="West";
 					flags=7;
@@ -806,7 +806,7 @@ class Mission
 					};
 					id=11;
 					type="Modern_USMC_Squadleader";
-					atlOffset=-3.4332275e-005;
+					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1827,7 +1827,7 @@ class Mission
 			{
 			};
 			id=10;
-			atlOffset=-3.4332275e-005;
+			atlOffset=-1.5258789e-005;
 		};
 		class Item3
 		{
@@ -2422,6 +2422,43 @@ class Mission
 			type="o_hq";
 			id=74;
 			atlOffset=93.339005;
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13702.027,47.116413,2903.604};
+				angles[]={6.2591867,5.5606713,0.011990411};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this attachTo [helicopterSpawnPad, [5.5, -5.5, .5] ]; }";
+				name="HeloSpawner";
+			};
+			id=91;
+			type="Land_InfoStand_V1_F";
+			atlOffset=3.8146973e-006;
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13713.485,47.310764,2913.1575};
+				angles[]={6.2631841,5.5606713,6.2751913};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this attachTo [vehicleSpawnPad, [5.5, -5.5, .5] ]; }";
+				name="vehicleSpawner";
+			};
+			id=92;
+			type="Land_InfoStand_V1_F";
 		};
 	};
 };

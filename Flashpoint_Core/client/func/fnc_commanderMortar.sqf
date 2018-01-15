@@ -15,6 +15,7 @@ if("[0,0,0]" != str (player getVariable "twc_commanderMortarPos"))then{
 	hint format["Firing at %1",_pos];
 	
 	_null = [_pos,100,8,"HE",5] spawn twc_fnc_virtualMortar;
+	twc_bluScore = twc_bluScore - 10;
 }else{
 	hint "You didn't select anywhere to Fire";
 };

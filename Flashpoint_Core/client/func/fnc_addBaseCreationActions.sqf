@@ -36,8 +36,6 @@ twc_bluforBaseFlagPole setVariable ["townValue",100];
 twc_bluforBaseFlagPole setVariable ["connectedToBase",true,true];
 twc_bluforBases pushback twc_bluforBaseFlagPole;
 
-[player] spawn twc_fnc_airDropSupplies;
-
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointSetAmmoSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;
 [player,1,["ACE_SelfActions","BaseListAction","FlashpointVehicleSpawn"]] call ace_interact_menu_fnc_removeActionFromObject;

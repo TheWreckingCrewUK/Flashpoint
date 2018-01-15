@@ -53,6 +53,16 @@ twc_restrictedVehicleSlots = [
 ];
 twc_supplyBoxBuildables = [["Land_HBarrier_Big_F",100],["Land_HBarrier_1_F",20],["Land_HBarrierTower_F",200],["Land_BarGate_F",75],["Land_BagBunker_Large_F",200],["Land_BagBunker_Small_F",150],["CamoNet_BLUFOR_big_F",50],["USMC_WarfareBFieldhHospital",400],["Land_fort_artillery_nest",200]];
 
+_faction = getText (configFile >> "cfgVehicles" >> (typeOf player) >> "Faction");
+if(_faction == "twc_public_baf")then{
+	twc_spawnableHelos = [["UK3CB_BAF_Wildcat_AH1_CAS_8A",0],["UK3CB_BAF_Wildcat_AH1_CAS_8A",0]];
+	twc_spawnableVehicles = [["rhsusf_m1025_w_s",0],["rhsusf_m1025_w_s_m2",0]];
+};
+if(_faction == "twc_public_usmc")then{
+	twc_spawnableHelos = [["UK3CB_BAF_Wildcat_AH1_CAS_8A",0],["UK3CB_BAF_Wildcat_AH1_CAS_8A",0]];
+	twc_spawnableVehicles = [["rhsusf_m1025_w_s",0],["rhsusf_m1025_w_s_m2",0]];
+};
+
 //Slot Restrictions. TBA when we are doing more then just testing
 _justPlayers = count(allPlayers - entities "HeadlessClient_F");
 if(false)then{

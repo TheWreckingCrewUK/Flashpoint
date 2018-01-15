@@ -15,6 +15,7 @@ if("[0,0,0]" != str (player getVariable "twc_commanderBombPos"))then{
 	hint format["CAS At at %1",_pos];
 	
 	[_pos,"B_Plane_CAS_01_Cluster_F",3] remoteExecCall ["twc_fnc_bombRun",2];
+	twc_bluScore = twc_bluScore - 10;
 	
 	
 }else{

@@ -27,7 +27,7 @@ while{!isNull (findDisplay 9999);}do{
 	ctrlSetText [1001,"Cost = " + str (_sandBags select _selectedIndex select 1) + " Supplies"];
 };
 sleep 0.2;
-systemChat str _selectedIndex;
+
 if(player getVariable "twc_spawnFromBox")then{
 	[_target,_classname,((_sandBags select _selectedIndex) select 1)] call twc_fnc_spawnDefenses;
 	player setVariable ["twc_spawnFromBox",false];

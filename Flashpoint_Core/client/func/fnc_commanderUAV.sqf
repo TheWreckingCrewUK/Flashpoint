@@ -28,6 +28,7 @@ if("[0,0,0]" != str (player getVariable "twc_commanderReconPos"))then{
 		};
 	}forEach _men;
 	hint "Hostile Positions marked on the CTAB";
+	twc_bluScore = twc_bluScore - 10;
 }else{
 	hint "You didn't select anywhere to Recon";
 };

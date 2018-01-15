@@ -15,6 +15,7 @@ if("[0,0,0]" != str (player getVariable "twc_commanderRocketPos"))then{
 	hint format["Rocket At at %1",_pos];
 	
 	"ModuleOrdnanceRocket_F" createVehicle _pos;
+	twc_bluScore = twc_bluScore - 10;
 	
 	
 }else{

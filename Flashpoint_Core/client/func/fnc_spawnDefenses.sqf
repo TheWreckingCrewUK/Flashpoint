@@ -21,7 +21,7 @@ twc_playerDistance = 0;
 player setVariable ["twc_placeObject",true];
 
 _supplies = ({_x == "TWC_ForwardBase_Supplies"}count (itemCargo _crate));
-if(_supplies < _cost)exitWith{hint "There is not enough supplies to create that item";};
+if(_supplies < _cost)exitWith{hint "There is not enough supplies to create that item"};
 
 clearItemCargoGlobal _crate;
 _crate addItemCargoGlobal ["TWC_ForwardBase_Supplies", (_supplies - _cost)];

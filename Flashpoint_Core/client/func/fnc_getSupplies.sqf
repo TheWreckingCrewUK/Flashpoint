@@ -3,6 +3,19 @@ params["_unit"];
 //Position Where the player called in the box
 _startPos = getPos _unit;
 
+_flag = nearestObject [_startPos,twc_flagClassname];
+
+if(isNil "_flag")exitWith{hint "You must of moved too far from the flag. get Supplies Failed"};
+
+if(_flag getVariable "connectedToBase")exitWith{
+	_box = "twc_SuppliesBox" createVehicle _startPos;
+	twc_bluScore = twc_bluScore - 10;
+	publicVariable "twc_bluScore";
+};
+
+twc_bluScore = twc_bluScore - 30;
+publicVariable "twc_bluScore";
+
 //Creating the helicopter
 _group = createGroup civilian;
 _array = [_startPos,0,"B_Heli_Transport_03_F",_group] call bis_fnc_spawnVehicle;
